@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:orm="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+
+
+	<persistence-unit name="clearPersistentUnit">
+	<!-- dev private -->
+		<properties>
+			<!-- This property enables the hbm files scanning acorss the module -->
+			 <property name="hibernate.archive.autodetection"  value="class,hbm" /> 
+
+			<!-- Bind entity manager factory to JNDI at java:jboss/myEntityManagerFactory -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			 <property name="hibernate.connection.url" value="jdbc:mysql://10.8.168.204:3306/string_db"/> 
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="root123"/>
+			<property name="hibernate.max_fetch_depth" value="3" />
+			<!-- hbm2ddl.auto MUST BE update! The console will otherwise overwrite 
+				the schema with each new thread -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+	         <property name="hibernate.show_sql" value="true" />
+	         
+	         <!-- c3p0 properties to remain the DB connection for longer time -->
+		<property name="hibernate.c3p0.validate" value="true" />
+			<property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.min_size" value="5" />
+			<property name="hibernate.c3p0.max_size" value="20" />
+			<property name="hibernate.c3p0.max_statements" value="50" />
+			<property name="hibernate.c3p0.preferredTestQuery" value="SELECT 1" />
+			<property name="hibernate.c3p0.testConnectionOnCheckout" value="true" />
+			<property name="hibernate.c3p0.idle_test_period" value="10" />
+			<property name="hibernate.c3p0.acquireRetryAttempts" value="5" />
+			<property name="hibernate.c3p0.acquireRetryDelay" value="200" />
+			<property name="hibernate.c3p0.timeout" value="40" /> 
+			
+	         
+			<!-- <property name="hibernate.multiTenancy" value="SCHEMA" />
+			<property name="hibernate.multi_tenant_connection_provider"
+				value="com.pft.framework.data.connection.PFTMultiTenantConnectionProvider" /> -->
+			<property name="hibernate.session_factory_name" value="java:/hibernate/Factory" />
+		<!-- 	<property name="hibernate.ejb.interceptor"
+				value="com.pft.framework.data.interceptors.AuditInterceptor" />
+ -->
+			<!-- for AS7 -->
+			<!--<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.BitronixJtaPlatform" 
+				/> -->
+			<property name="hibernate.transaction.factory_class"
+				value="org.hibernate.transaction.JTATransactionFactory" />
+			<property name="hibernate.transaction.manager_lookup_class"
+				value="org.hibernate.transaction.JBossTransactionManagerLookup" />
+			<!-- <property name="hibernate.transaction.manager_lookup_class" value="org.jbpm.integration.console.JBPMTransactionManager" 
+				/> -->
+			<property name="jboss.entity.manager.factory.jndi.name"
+				value="ClearSessionFactory_DAXPvt" />
+		</properties>
+	</persistence-unit>
+</persistence>

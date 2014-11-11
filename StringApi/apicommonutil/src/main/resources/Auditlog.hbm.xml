@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2014 5:46:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pft.string.service.api.common.bdo.Auditlog" table="auditlog" catalog="string_db">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="string">
+            <column name="userID" />
+        </property>
+        <property name="userGuid" type="string">
+            <column name="userGUID" />
+        </property>
+        <property name="loginTime" type="timestamp">
+            <column name="loginTime" length="0" />
+        </property>
+        <property name="logoutTime" type="timestamp">
+            <column name="logoutTime" length="0" />
+        </property>
+    </class>
+</hibernate-mapping>

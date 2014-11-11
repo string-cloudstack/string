@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2014 5:46:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pft.string.service.api.common.bdo.ServiceRegistry" table="service_registry" catalog="string_db">
+        <id name="service" type="java.lang.Integer">
+            <column name="service" />
+            <generator class="identity" />
+        </id>
+        <property name="serviceName" type="string">
+            <column name="serviceName" />
+        </property>
+        <property name="serviceToken" type="string">
+            <column name="serviceToken" />
+        </property>
+        <property name="isPublic" type="boolean">
+            <column name="isPublic" not-null="true" />
+        </property>
+        <property name="serviceDescription" type="string">
+            <column name="serviceDescription" />
+        </property>
+    </class>
+</hibernate-mapping>

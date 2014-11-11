@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2014 5:46:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pft.string.service.api.common.bdo.Assets" table="assets" catalog="string_db">
+       <composite-id>
+			<key-property name="assetHash" column="assetHash"  />
+			<key-property name="serviceToken" column="serviceToken" length="10" />
+		</composite-id>
+       
+       <property name="id" type="integer" unique="true">
+			<column name="id" />
+		</property>
+		
+        <property name="url" type="string">
+            <column name="url" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="metadata" type="string">
+            <column name="metadata" />
+        </property>
+        
+        <!-- <set name="services" table="service" inverse="true" lazy="true" fetch="select" cascade="all-delete-orphan">
+            <key>
+                <column name="assetHash" />
+            </key>
+            <one-to-many class="com.pft.string.service.api.common.bdo.Service" />
+        </set> -->
+    </class>
+</hibernate-mapping>

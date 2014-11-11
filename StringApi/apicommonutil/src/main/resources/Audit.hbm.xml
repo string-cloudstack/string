@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 18, 2013 4:48:22 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pft.string.service.framework.audit.Audit" table="audit">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="inTimeStamp" type="timestamp">
+			<column name="InTimeStamp" length="23" />
+		</property>
+		 <property name="outTimeStamp" type="timestamp">
+			<column name="OutTimeStamp" length="23" />
+		</property>
+        <property name="userSessionKey" type="string">
+            <column name="UserSessionKey" length="128" />
+        </property>
+        <property name="action" type="string">
+            <column name="Action" length="50" not-null="true" />
+        </property>
+        <property name="parameters" type="string">
+            <column name="Parameters" length="250" />
+        </property>
+        <property name="preChangeValues" type="string">
+            <column name="PreChangeValues" />
+        </property>
+        <property name="successStatus" type="boolean">
+            <column name="SuccessStatus" />
+        </property>
+         <property name="errorMessage" type="string">
+            <column name="ErrorMessage" />
+        </property>
+        <property name="requestId" type="string">
+            <column name="RequestId"  not-null="true"/>
+        </property>
+        <property name="additionalInfo" type="string">
+            <column name="AdditionalInfo" />
+        </property>       
+        <property name="severity" type="integer">
+            <column name="Severity" />
+        </property>
+		<property name="userId" type="integer">
+            <column name="userId" />
+        </property>
+    </class>
+</hibernate-mapping>

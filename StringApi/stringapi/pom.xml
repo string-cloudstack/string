@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.pft.string.service</groupId>
+		<artifactId>api</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.pft.string.service.api</groupId>
+	<artifactId>stringapi</artifactId>
+	<packaging>war</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>com.pft.string.service.api</groupId>
+			<artifactId>apicommonutil</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.pft.string.service</groupId>
+			<artifactId>framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+	<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>StringAPI</finalName>
+		<resources>
+			<resource>
+				<targetPath>${project.basedir}/target/config</targetPath>
+				<directory>${project.basedir}/src/main/resources/</directory>
+				<includes>
+					<include>daxapiconfig.properties</include>
+					<include>apidatabase.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/src/main/resources/</directory>
+				<includes>
+					<include>logback.xml</include>			
+				</includes>
+			</resource>	
+		</resources>
+	</build>
+</project>

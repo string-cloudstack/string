@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2014 5:46:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pft.string.service.api.common.bdo.Users" table="users"  catalog="string_db">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="oldPassword" type="string">
+            <column name="oldPassword" />
+        </property>
+        <property name="userGuid" type="string">
+            <column name="userGUID" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" />
+        </property>
+        <property name="isAdmin" type="boolean">
+            <column name="isAdmin" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" />
+        </property>
+    </class>
+</hibernate-mapping>
