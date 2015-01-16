@@ -1,5 +1,5 @@
 GNU LESSER GENERAL PUBLIC LICENSE
-                       Version 2.1, February 1999
+                       Version 2.1, February 1999 
 
  Copyright (C) 1991, 1999 Free Software Foundation, Inc.
  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -24,7 +24,7 @@ can use it too, but we suggest you first think carefully about whether
 this license or the ordinary General Public License is the better
 strategy to use in any particular case, based on the explanations below.
 
-  When we speak of free software, we are referring to freedom of use,
+  When we speak of free software, we are referring to freedom of use, 
 not price.  Our General Public Licenses are designed to make sure that
 you have the freedom to distribute copies of free software (and charge
 for this service if you wish); that you receive source code or can get
