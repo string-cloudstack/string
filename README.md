@@ -1,6 +1,5 @@
 
 ```html
-<HTML>
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <META http-equiv="X-UA-Compatible" content="IE=8">
@@ -388,7 +387,6 @@ body {margin-top: 0px;margin-left: 0px;}
 </DIV>
 </DIV>
 </BODY>
-</HTML>
 ```
 
 
